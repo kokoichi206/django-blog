@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} - kokoichi のブログ{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <h2>{{ post.created_at }}</h2>
+        <h2>{{ post.body|linebreaksbr }}</h2>
+    </div>
+
+    <div>
+        <a href="{% url 'post_list' %}">一覧に戻る</a>
+    </div>
+{% endblock%}
